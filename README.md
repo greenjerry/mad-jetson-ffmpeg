@@ -117,8 +117,9 @@ Go into the newly cloned repo and configure ffmpeg using this command:
   --enable-nonfree \
   --enable-nvmpi \
   --enable-nvv4l2dec \
-  --extra-libs="-L/usr/lib/aarch64-linux-gnu/tegra -lnvbuf_utils" \
-  --extra-cflags="-I /usr/src/jetson_multimedia_api/include/"
+  --extra-libs="-L/usr/lib/aarch64-linux-gnu/tegra -lnvbuf_utils -lnvbufsurface" \
+  --extra-cflags="-I /usr/src/jetson_multimedia_api/include/" \
+  --enable-shared 
 ```
 
 (Make sure to remove `--enable-libsvtav1` if you didn't install SVT-AV1 before.)
